@@ -66,7 +66,7 @@ This is a monorepo containing both the Agent (Backend) and the UI (Frontend).
 
 ### Step 1: Wake the Brain (Agent)
 ```bash
-cd heaven-architect
+cd heaven-agent/examples/heaven-architect
 pnpm install
 # Starts the agent on [http://127.0.0.1:8787](http://127.0.0.1:8787)
 npx wrangler dev --local
