@@ -1,158 +1,72 @@
-# 🌐 NullShot - Typescript Agent Framework
+# 🏗️ Heaven: The AI Architect for IP Assets
 
-<div align="center">
-  <h3>Building the future of AI Agent Interoperability</h3>
-  <p><i>Pre-Alpha: This project is in active development.</i></p>
-</div>
+> **"Don't just generate code. Own the blueprint."**
 
-[![Discord](https://img.shields.io/discord/1358691448173625468?style=flat)](https://discord.gg/acwpp6zWEc)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![Heaven Banner]([![landingui-(1).png](https://i.postimg.cc/SxcgLb8z/landingui-(1).png)](https://postimg.cc/NKf8YVdg) 
+*(Replace with a screenshot of your app)*
 
-Welcome to a new paradigm in AI development. MCP provides the foundation for building intelligent, interoperable agents that can communicate, evolve, and generate value at the edge of the network.
-
-## Vision
-
-We're extending [Cloudflare's vision for AI Agents](https://blog.cloudflare.com/making-cloudflare-the-best-platform-for-ai-agents) with a focus on web3 and MCPs as plugins:
-
-- 🤝 AI Agents as teammates/organizations generating revenue and performing advanced operations
-- 💰 Cost-effective shared hosting options
-- 🔒 Secure sensitive assets (trading agents, treasuries, etc.)
-- 📈 Self-improving agents based on collective usage
-- 💸 Drive MCP usage revenue to open source contributors
-- 💼 Monetization avenues for closed-source MCP use cases
-- ⚙️ Seamless configuration options
-- 🚀 Quick iteration on ideas locally and in-cloud
-- 🔓 No vendor lock-in, self-hosting and personal account options
-
-## Project Status
-
-This project is in pre-alpha and actively evolving. Current focus areas:
-
-### Ready for Use
-
-- ✅ Core MCP Framework
-- ✅ Multi Session & Authentication Patterns
-- ✅ Official MCP WebSocket Support and HTTP Streaming Support
-- ✅ Agent Framework (AI SDK)
-- ✅ Seamless MCP Plugins (mcp.json) for Agents
-- ✅ Agent MCP Dependency Management
-- ✅ MCP Webhook / External Service Support
-- ✅ Playground UI for LLMs + MCPs
-
-### In Development
-
-- ☁️ Cloudflare Service Examples (KV, D1, DO state, Analytics, Workflows, Schema Migrations)
-- 🤖 LangChain and Agent SDK examples coming soon
-- 📄 Cloudflare Pages (SSE / Fullstack) Examples
-- 🔑 Authentication (OAuth, JWT)
-
-## Quick Start
-
-Get started with the Null Shot CLI to create MCP servers and AI agents:
-
-### Install the CLI
-
-```bash
-npm install -g @nullshot/cli
-```
-
-### Create a new MCP server
-
-```bash
-nullshot create mcp
-```
-
-### Create a new Agent
-
-```bash
-nullshot create agent
-```
-
-### Initialize MCP configuration in existing project
-
-```bash
-nullshot init
-```
-
-### Install MCP dependencies
-
-```bash
-nullshot install
-```
-
-### Run in development mode
-
-```bash
-nullshot dev
-```
-
-## 🤖 AI Provider Support
-
-This framework supports 6 major AI providers with dynamic model fetching and official SDK integration:
-
-### Supported Providers
-
-| Provider        | Latest Models                                    | SDK                   | Dynamic | API Key    |
-|:----------------|:-------------------------------------------------|:----------------------|:--------|:-----------|
-| **OpenAI**      | GPT-4o, GPT-4o-mini, GPT-3.5-turbo             | `@ai-sdk/openai`     | ✅      | ✅         |
-| **Anthropic**   | Claude Opus 4.1, Claude Sonnet 4, Claude 3.7   | `@ai-sdk/anthropic`  | ✅      | ✅         |
-| **DeepSeek**    | DeepSeek-Chat, DeepSeek-Coder                   | `@ai-sdk/deepseek`   | ✅      | ✅         |
-| **Workers AI**  | Llama 3.1/3.2, Gemma 2, Mistral 7B (~49 models) | `workers-ai-provider` | ✅      | Cloudflare |
-| **Gemini**      | Gemini 1.5 Pro Latest, Gemini 1.5 Flash Latest | `@ai-sdk/google`     | ✅      | ✅         |
-| **Grok**        | Grok-4, Grok-3, Grok-3-mini, Grok-2-1212       | `@ai-sdk/xai`        | ✅      | ✅         |
-
-### Key Features
-
-- **🔄 Dynamic Model Fetching**: Real-time model lists from provider APIs with intelligent fallbacks
-- **🎯 Official SDK Integration**: Uses official AI SDK providers for consistent, reliable integration
-- **💾 Smart Caching**: Model lists cached for 30 minutes with API key validation
-- **🔧 Provider-Aware UI**: Auto-loading saved API keys and intelligent model selection
-- **📡 Streaming Support**: Real-time responses across all providers
-- **⚡ Fallback Handling**: Graceful degradation when APIs are unavailable
-
-### Implementation Examples
-
-- **Next.js Web App**: [`examples/playground-showcase`](examples/playground-showcase) - Full-featured chat interface
-- **Cloudflare Workers Agent**: [`examples/simple-prompt-agent`](examples/simple-prompt-agent) - Server-side AI agent
-- **React Components**: [`packages/playground`](packages/playground) - Reusable UI components
-
-## Documentation
-
-Comprehensive documentation is available at [Null Shot Docs](https://nullshot.ai/docs):
-
-- **[Project Overview](https://nullshot.ai/docs)** - Get started with Null Shot
-- **[Agent Framework - Getting Started](https://nullshot.ai/en/docs/developers/agents-framework/overview)** - Build AI agents with Cloudflare Workers
-- **[MCP Framework Overview](https://nullshot.ai/en/docs/developers/mcp-framework/overview)** - Model Context Protocol implementation
-- **[Platform Overview](https://nullshot.ai/en/docs/developers/platform/overview)** - Understanding the platform architecture
-- **[Common Services](https://nullshot.ai/en/docs/developers/services/overview)** - Cloudflare services integration
-- **[Playground](https://nullshot.ai/en/docs/developers/playground)** - Interactive development environment
-
-## Release Process
-
-This repository uses an automated release workflow following semantic versioning:
-
-1. **Pull Request Testing** - When you create a PR, it automatically runs tests and a semantic-release dry run
-2. **Automated Publishing** - When merged to main, changed packages are automatically published to npm
-3. **Versioning** - Package versions are determined by [Conventional Commits](https://www.conventionalcommits.org/) standards
-
-For detailed information about our release process, see [.github/RELEASE_PROCESS.md](.github/RELEASE_PROCESS.md).
-
-## Contributing
-
-We welcome contributions! Our vision is to create a collaborative ecosystem where AI and human developers work together. Soon, we'll have an AI agent to audit and govern contributions based on our shared vision.
-
-If you're interested in contributing, please:
-
-1. Join our [Discord community](https://discord.gg/acwpp6zWEc)
-2. Watch this repository for updates
-3. Star the project if you find it interesting
-
-## License
-
-MIT License - see the [LICENSE](LICENSE) file for details.
+**Heaven** is a "Headless" Agentic Infrastructure that turns English prompts into deployed dApps. Unlike standard coding assistants, Heaven treats every generated architecture as a **Real World Asset**. It autonomously creates, validates, and **registers the software blueprint as Intellectual Property (IP)** on Story Protocol before a single line of code is deployed.
 
 ---
 
-<div align="center">
-  <i>Built with ❤️ by the Xava DAO Community</i>
-</div>
+### 🔗 Quick Links
+- **🎥 Demo Video:** [INSERT_YOUTUBE_LINK_HERE]
+- **🌐 Live App:** [INSERT_VERCEL_LINK_HERE]
+- **📜 Verified IP Asset (Story Explorer):** [INSERT_LINK_TO_A_REAL_TX_ON_STORY_EXPLORER]
+
+---
+
+## 🌍 The "Surreal World Asset" Problem
+We identified a critical gap in the Generative AI boom:
+1.  **The "Idea Theft" Paradox:** AI makes it easy to generate brilliant software architectures, but there is no mechanism to claim ownership of these outputs.
+2.  **The Unbanked Agent:** AI agents can write code but cannot transact, pay for gas, or protect their work.
+3.  **Software is an RWA:** Intellectual Property (software architecture) is the most valuable Real World Asset in the digital economy, yet it remains untracked and unprotected on-chain.
+
+## ⚡ The Solution: Heaven
+Heaven is the first **IP-First Construction Company**. It orchestrates the entire supply chain of software creation while ensuring the creator retains ownership.
+
+1.  **🗣️ You Prompt:** *"Build a Music Streaming DAO."*
+2.  **🧠 Heaven Architects:** The NullShot agent breaks this down into a technical graph (Smart Contracts + Frontend).
+3.  **📜 Heaven Registers:** Before coding, the agent interacts with **Story Protocol** to mint the "Architecture Plan" as a Programmable IP Asset. You now own the blueprint on-chain.
+4.  **🛠️ Heaven Builds:** The agent uses **Thirdweb** to deploy the contracts autonomously.
+
+---
+
+## 🛠️ How It's Made (Technical Architecture)
+
+We solved the "Monolith Problem" by decoupling Intelligence from Execution. Our architecture consists of three distinct layers connected by a custom HTTP bridge.
+
+### 1. The Brain: NullShot Agent (Cloudflare Workers)
+* **Engine:** Custom TypeScript agent built on the **NullShot** framework.
+* **Innovation:** We enforce a "Manager Pattern." The agent cannot hallucinate code directly; it must use tools.
+* **Routing:** We implemented a custom `fetch` override to bypass standard AI SDK routing, allowing direct, latency-free JSON communication with our frontend.
+
+### 2. The Registry: Story Protocol Integration
+* **SDK:** `@story-protocol/core-sdk`
+* **Workflow:**
+    * The Agent generates a JSON `plan.json` representing the software architecture.
+    * We use the **SPG (Stateful Programmable Gateway)** to mint an NFT and register it as an IP Asset in a single atomic transaction on the Story Aeneid Testnet.
+    * **Result:** The user gets an Explorer Link proving they own the copyright to the generated system.
+
+### 3. The Hands: Thirdweb & Frontend
+* **UI:** React + Vite + Tailwind CSS.
+* **Wallet:** Integrated **Thirdweb SDK v5** for authentication and Account Abstraction.
+* **Payment Gate:** To simulate a real-world "Contractor" relationship, we implemented a transaction gate. The user must approve a **0.0001 ETH** authorization fee before the agent begins work.
+
+---
+
+## 🧪 How to Run Locally
+
+This is a monorepo containing both the Agent (Backend) and the UI (Frontend).
+
+### Prerequisites
+* Node.js v18+
+* pnpm
+* A wallet with **Story Aeneid Testnet** ETH.
+
+### Step 1: Wake the Brain (Agent)
+```bash
+cd heaven-architect
+pnpm install
+# Starts the agent on [http://127.0.0.1:8787](http://127.0.0.1:8787)
+npx wrangler dev --local
