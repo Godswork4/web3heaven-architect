@@ -1,4 +1,4 @@
-# Simple Prompt Agent
+# HEAVEN ARCHITECT
 
 A Cloudflare Workers-based AI agent implementation that uses the @nullshot/agent SDK to create a simple that can manage your tasks through a todo list.
 
@@ -14,7 +14,7 @@ This project demonstrates:
 ## Project Structure
 
 ```
-/simple-prompt-agent
+/heaven-architect
 ├── src/
 │   └── index.ts         # Main worker implementation with agent and router setup
 ├── mcp.json             # MCP server configuration
@@ -51,7 +51,7 @@ pnpm install
 cp .dev.vars.example .dev.vars
 ```
 
-3. Configure your `.dev.vars` with the following variables:
+3. Configure your `.dev.vars` with any the following variables:
 
 ```
 AI_PROVIDER=[anthropic || openai || deepseek || workers-ai || gemini || grok]
@@ -62,6 +62,12 @@ CLOUDFLARE_ACCOUNT_ID=[your_cloudflare_account_id]
 CLOUDFLARE_API_KEY=[your_cloudflare_api_key]
 GOOGLE_API_KEY=[your_google_api_key]
 GROK_API_KEY=[your_grok_api_key]
+
+4.cd examples/heaven-architect
+
+5.To start development:
+
+npx wrangler dev --local
 ```
 
 ### Development
@@ -72,10 +78,7 @@ The development setup runs three services:
 - Agent service on port 8787
 - Playground UI on port 3000
 
-To start development:
 
-```bash
-pnpm dev
 ```
 
 To start the agent by itself:
