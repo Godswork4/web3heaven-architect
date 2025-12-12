@@ -109,7 +109,7 @@ This configuration is automatically serialized into an environment variable duri
 
 ### Agent Implementation
 
-The `SimplePromptAgent` class:
+The `heaven-ar` classchitect:
 
 - Extends `AiSdkAgent` from @nullshot/agent/aisdk
 - Supports both Anthropic and OpenAI language models
@@ -159,8 +159,7 @@ The project uses:
 
 1. Start the development servers:
 
-```bash
-pnpm dev
+npx wrangler dev --local
 ```
 
 2. Access the services:
